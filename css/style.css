@@ -564,9 +564,10 @@ input {
   padding-left: 15px;
 }
 .rests-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2vw;
 }
 
 .rest {
@@ -608,11 +609,10 @@ input {
 
 @media screen and (max-width: 1034px) {
   .rests-list {
-    display: flex;
-    /*flex: 0 0 100%;
-    justify-content: space-between;
-    padding: 16px;*/
-    margin-right: 1%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vw;
   }
 
   .rest {
@@ -625,6 +625,12 @@ input {
 }
 
 @media screen and (max-width: 675px) {
+  .rests-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
   .rest {
     display: flex;
     flex: 0 0 100%;
